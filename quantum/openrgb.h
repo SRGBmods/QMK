@@ -20,7 +20,7 @@
 // so OpenRGB can detect compatible firmware.
 #define OPENRGB_PROTOCOL_VERSION 0xD
 
-#define RAW_EPSIZE 64
+#define RAW_EPSIZE 32
 
 enum openrgb_command_id {
     OPENRGB_GET_PROTOCOL_VERSION = 1,
