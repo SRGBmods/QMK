@@ -16,7 +16,7 @@ bool OPENRGB_DIRECT(effect_params_t* params) {
     }
 #        endif
 
-    return led_max < DRIVER_LED_TOTAL;
+    return led_max < RGB_MATRIX_LED_COUNT;
 }
 #    endif
 #endif
