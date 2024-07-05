@@ -38,7 +38,7 @@
 #endif
 
 #if !defined(OPENRGB_DIRECT_MODE_UNBUFFERED)
-RGB g_openrgb_direct_mode_colors[DRIVER_LED_TOTAL] = {[0 ... DRIVER_LED_TOTAL - 1] = {OPENRGB_DIRECT_MODE_STARTUP_GREEN, OPENRGB_DIRECT_MODE_STARTUP_RED, OPENRGB_DIRECT_MODE_STARTUP_BLUE}};
+RGB g_openrgb_direct_mode_colors[RGB_MATRIX_LED_COUNT] = {[0 ... RGB_MATRIX_LED_COUNT - 1] = {OPENRGB_DIRECT_MODE_STARTUP_GREEN, OPENRGB_DIRECT_MODE_STARTUP_RED, OPENRGB_DIRECT_MODE_STARTUP_BLUE}};
 #endif
 
 /* Array of supported effects of the keyboard */
@@ -250,7 +250,7 @@ void openrgb_get_qmk_version(void) {
 }
 void openrgb_get_device_info(void) {
     raw_hid_buffer[0] = OPENRGB_GET_DEVICE_INFO;
-    raw_hid_buffer[1] = DRIVER_LED_TOTAL;
+    raw_hid_buffer[1] = RGB_MATRIX_LED_COUNT;
     raw_hid_buffer[2] = MATRIX_COLS * MATRIX_ROWS;
 
 #define MASSDROP_VID 0x04D8
@@ -295,7 +295,7 @@ void openrgb_get_led_info(uint8_t *data) {
         const uint8_t led_idx  = first_led + i;
         const uint8_t data_idx = i * 7;
 
-        if (led_idx >= DRIVER_LED_TOTAL) {
+        if (led_idx >= RGB_MATRIX_LED_COUNT) {
             raw_hid_buffer[data_idx + 3] = OPENRGB_FAILURE;
         } else {
             raw_hid_buffer[data_idx + 1] = g_led_config.point[led_idx].x;
@@ -381,7 +381,7 @@ void openrgb_direct_mode_set_single_led(uint8_t *data) {
 
     raw_hid_buffer[0] = OPENRGB_DIRECT_MODE_SET_SINGLE_LED;
 
-    if (led >= DRIVER_LED_TOTAL || r > 255 || g > 255 || b > 255) {
+    if (led >= RGB_MATRIX_LED_COUNT || r > 255 || g > 255 || b > 255) {
         raw_hid_buffer[RAW_EPSIZE - 2] = OPENRGB_FAILURE;
         return;
     }
