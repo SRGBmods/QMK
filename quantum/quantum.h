@@ -196,6 +196,10 @@ extern layer_state_t layer_state;
 #    endif
 #endif
 
+#ifdef OPENRGB_ENABLE
+#    include "openrgb.h"
+#endif
+
 #ifdef DIGITIZER_ENABLE
 #    include "digitizer.h"
 #endif
