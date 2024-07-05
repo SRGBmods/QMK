@@ -634,6 +634,7 @@ ifeq ($(strip $(OPENRGB_ENABLE)), yes)
     RAW_ENABLE := yes
     SRC += $(QUANTUM_DIR)/openrgb.c
     OPT_DEFS += -DOPENRGB_ENABLE
+    endif
 endif
 
 ifeq ($(strip $(LED_TABLES)), yes)
