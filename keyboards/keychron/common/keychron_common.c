@@ -17,7 +17,7 @@
 #include "keychron_common.h"
 #include "sync_timer.h"
 
-#include "quantum/socd_cleaner/socd_cleaner.h"
+#include "/quantum/socd_cleaner/socd_cleaner.h"
 
 socd_cleaner_t socd_v = {{KC_W, KC_S}, SOCD_CLEANER_LAST};
 socd_cleaner_t socd_h = {{KC_A, KC_D}, SOCD_CLEANER_LAST};
