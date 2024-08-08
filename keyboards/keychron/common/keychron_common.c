@@ -40,6 +40,8 @@ void housekeeping_task_keychron(void) {
 }
 
 bool process_record_keychron(uint16_t keycode, keyrecord_t *record) {
+    if (!process_socd_cleaner(keycode, record, &socd_v)) { return false; }
+    if (!process_socd_cleaner(keycode, record, &socd_h)) { return false; }
     switch (keycode) {
         case QK_KB_0:
             if (record->event.pressed) {
@@ -91,6 +93,21 @@ bool process_record_keychron(uint16_t keycode, keyrecord_t *record) {
                 }
             }
             return false;  // Skip all further processing of this key
+        case SOCDON:  // Turn SOCD Cleaner on.
+        if (record->event.pressed) {
+        socd_cleaner_enabled = true;
+        }
+        return false;
+        case SOCDOFF:  // Turn SOCD Cleaner off.
+        if (record->event.pressed) {
+        socd_cleaner_enabled = false;
+        }
+        return false;
+        case SOCDTOG:  // Toggle SOCD Cleaner.
+        if (record->event.pressed) {
+        socd_cleaner_enabled = !socd_cleaner_enabled;
+        }
+        return false;
         default:
             return true;  // Process all other keycodes normally
     }
@@ -100,29 +117,3 @@ bool process_record_keychron(uint16_t keycode, keyrecord_t *record) {
 
 socd_cleaner_t socd_v = {{KC_W, KC_S}, SOCD_CLEANER_LAST};
 socd_cleaner_t socd_h = {{KC_A, KC_D}, SOCD_CLEANER_LAST};
-
-bool process_record_user(uint16_t keycode, keyrecord_t* record) {
-  if (!process_socd_cleaner(keycode, record, &socd_v)) { return false; }
-  if (!process_socd_cleaner(keycode, record, &socd_h)) { return false; }
-
-  switch (keycode) {
-    case SOCDON:  // Turn SOCD Cleaner on.
-      if (record->event.pressed) {
-        socd_cleaner_enabled = true;
-      }
-      return false;
-    case SOCDOFF:  // Turn SOCD Cleaner off.
-      if (record->event.pressed) {
-        socd_cleaner_enabled = false;
-      }
-      return false;
-    case SOCDTOG:  // Toggle SOCD Cleaner.
-      if (record->event.pressed) {
-        socd_cleaner_enabled = !socd_cleaner_enabled;
-      }
-      return false;
-
-    // Other macros...
-  }
-  return true;
-}
