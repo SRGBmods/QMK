@@ -17,6 +17,11 @@
 #include "keychron_common.h"
 #include "sync_timer.h"
 
+#include "quantum/socd_cleaner/socd_cleaner.h"
+
+socd_cleaner_t socd_v = {{KC_W, KC_S}, SOCD_CLEANER_LAST};
+socd_cleaner_t socd_h = {{KC_A, KC_D}, SOCD_CLEANER_LAST};
+
 bool is_siri_active = false;
 uint32_t siri_timer = 0;
 
@@ -112,8 +117,3 @@ bool process_record_keychron(uint16_t keycode, keyrecord_t *record) {
             return true;  // Process all other keycodes normally
     }
 }
-
-#include "quantum/socd_cleaner/socd_cleaner.h"
-
-socd_cleaner_t socd_v = {{KC_W, KC_S}, SOCD_CLEANER_LAST};
-socd_cleaner_t socd_h = {{KC_A, KC_D}, SOCD_CLEANER_LAST};
