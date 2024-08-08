@@ -20,7 +20,7 @@
  * <https://getreuer.info/posts/keyboards/socd-cleaner>
  */
 
-#include "socd_cleaner.h"
+#include "quantum/socd_cleaner/socd_cleaner.h"
 
 #ifdef __cplusplus
 extern "C" {
