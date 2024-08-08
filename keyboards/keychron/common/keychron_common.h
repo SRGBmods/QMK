@@ -24,6 +24,9 @@
 #    include "via.h"
 #endif
 
+#define USB_POLLING_INTERVAL_MS 1
+#define FORCE_NKRO
+
 #include "quantum_keycodes.h"
 
 enum custom_keycodes {
