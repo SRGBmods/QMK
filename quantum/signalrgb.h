@@ -50,6 +50,12 @@ gmmk/gmmk2/p65/ansi:default                 0 0 7
 gmmk/gmmk2/p65/iso:default                  0 0 8
 gmmk/gmmk2/p96/ansi:default                 0 0 9
 gmmk/gmmk2/p96/iso:default                  0 0 10
+gmmk/gmmk3/p65/ansi:default                 0 0 11
+gmmk/gmmk3/p65/iso:default                  0 0 11
+gmmk/gmmk3/p75/ansi:default                 0 0 12
+gmmk/gmmk3/p75/iso:default                  0 0 12
+gmmk/gmmk3/p100/ansi:default                0 0 13
+gmmk/gmmk3/p100/iso:default                 0 0 13
 redragon/k530:default                       0 1 1
 redragon/k552/rev1:ansi                     0 1 2
 redragon/k552/rev1:iso                      0 1 2
