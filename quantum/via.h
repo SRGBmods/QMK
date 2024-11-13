@@ -133,6 +133,13 @@ gmmk/gmmk2/p65/ansi:via                 0 0 7
 gmmk/gmmk2/p65/iso:via                  0 0 8
 gmmk/gmmk2/p96/ansi:via                 0 0 9
 gmmk/gmmk2/p96/iso:via                  0 0 10
+gmmk/gmmk3/p65/ansi:via                 0 0 11
+gmmk/gmmk3/p65/iso:via                  0 0 11
+gmmk/gmmk3/p75/ansi:via                 0 0 12
+gmmk/gmmk3/p75/iso:via                  0 0 12
+gmmk/gmmk3/p100/ansi:via                0 0 13
+gmmk/gmmk3/p100/iso:via                 0 0 13
+
 redragon/k556:via                       0 1 3
 redragon/k580:via                       0 1 4
 */
