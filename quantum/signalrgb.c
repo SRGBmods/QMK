@@ -73,11 +73,13 @@ void led_streaming(uint8_t *data) //Stream data from HID Packets to Keyboard.
 
 
       // Example values to respect indicators: yes some hand coding compared to Keychron git repos may take work but spoiler wise the values are there!
-      //if ( ((index + i) == CAPS_LOCK_LED_INDEX && host_keyboard_led_state().caps_lock) || ((index + i) == NUM_LOCK_LED_INDEX && host_keyboard_led_state().num_lock) || ((index + i) == SCROLL_LOCK_LED_INDEX && host_keyboard_led_state().scroll_lock)) {
-      //if ( ((index + i) == CAPS_LOCK_LED_INDEX && host_keyboard_led_state().caps_lock) || ((index + i) == NUM_LOCK_LED_INDEX && host_keyboard_led_state().num_lock))   {
-      //if ( (index + i) == CAPS_MAC_WIN_LED_INDEX && host_keyboard_led_state().caps_lock)   {
-      //if ( (index + i) == CAPS_LOCK_LED_INDEX && host_keyboard_led_state().caps_lock)   {
-      //if ( (index + i) == NUM_LOCK_LED_INDEX && host_keyboard_led_state().num_lock)  {
+      // Look at the source and find your index values...
+      
+      //if ( ((index + i) == 59 && host_keyboard_led_state().caps_lock) || ((index + i) == 36 && host_keyboard_led_state().num_lock) || ((index + i) == 14 && host_keyboard_led_state().scroll_lock)) isIndicator = true;
+      //if ( ((index + i) == 59 && host_keyboard_led_state().caps_lock) || ((index + i) == 36 && host_keyboard_led_state().num_lock)) isIndicator = true;
+      //if ( (index + i) == 63 && host_keyboard_led_state().caps_lock) isIndicator = true;
+      //if ( (index + i) == 59 && host_keyboard_led_state().caps_lock) isIndicator = true;
+      //if ( (index + i) == 36 && host_keyboard_led_state().num_lock) isIndicator = true;
 
       bool isIndicator = false;
 
