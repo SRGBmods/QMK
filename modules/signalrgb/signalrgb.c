@@ -1,4 +1,4 @@
-ASSERT_COMMUNITY_MODULES_MIN_API_VERSION(1,0,0);
+//ASSERT_COMMUNITY_MODULES_MIN_API_VERSION(1,0,0);
 
 #ifndef RAW_ENABLE
 #    error "RAW HID Communication is not enabled" //This should be impossible to run into afaik. Common_features ensures RAWHID is enabled.
@@ -121,7 +121,7 @@ void led_streaming(uint8_t *data) //Stream data from HID Packets to Keyboard.
 void signalrgb_mode_enable(void)
 {
     #if defined(RGB_MATRIX_ENABLE)
-    rgb_matrix_mode_noeeprom(RGB_MATRIX_SIGNALRGB); //Set RGB Matrix to SignalRGB Compatible Mode
+    rgb_matrix_mode_noeeprom(RGB_MATRIX_CUSTOM_SIGNALRGB); //Set RGB Matrix to SignalRGB Compatible Mode
     #endif
 }
 
