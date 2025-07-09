@@ -14,10 +14,10 @@
 #if defined(RGBLIGHT_ENABLE) && defined(RGB_MATRIX_ENABLE)
     #define TOTAL_LEDS (RGBLIGHT_LED_COUNT + RGB_MATRIX_LED_COUNT)
     static const uint8_t RGBMATRIX_END = RGB_MATRIX_LED_COUNT;
-#elif defined(RGBLIGHT_ENABLE)
+#elifdef(RGBLIGHT_ENABLE)
     #define TOTAL_LEDS RGBLIGHT_LED_COUNT
     #define RGBMATRIX_END 0
-#elif defined(RGB_MATRIX_ENABLE)
+#elifdef(RGB_MATRIX_ENABLE)
     #define TOTAL_LEDS RGB_MATRIX_LED_COUNT
     #define RGBMATRIX_END RGB_MATRIX_LED_COUNT
 #else
@@ -60,9 +60,9 @@ void led_streaming(uint8_t *data) //Stream data from HID Packets to Keyboard.
 {
     uint8_t index = data[1];
     uint8_t numberofleds = data[2]; 
-    #if defined(RGBLIGHT_ENABLE)
+    #ifdef(RGBLIGHT_ENABLE)
         if(index + numberofleds > RGBLIGHT_LED_COUNT) {
-    #elif defined(RGB_MATRIX_ENABLE)
+    #elifdef(RGB_MATRIX_ENABLE)
         if(index + numberofleds > RGB_MATRIX_LED_COUNT) {
     #endif
         packet[1] = DEVICE_ERROR_LED_BOUNDS;
@@ -86,43 +86,43 @@ void led_streaming(uint8_t *data) //Stream data from HID Packets to Keyboard.
 
       bool isIndicator = false;
 
-      #if defined(NUM_LOCK_LED_INDEX)
+      #ifdef(NUM_LOCK_LED_INDEX)
       if ( (index + i) == NUM_LOCK_LED_INDEX && host_keyboard_led_state().num_lock ) isIndicator = true;
       #endif
 
-      #if defined(NUM_LOCK_INDEX)
+      #ifdef(NUM_LOCK_INDEX)
       if ( (index + i) == NUM_LOCK_INDEX && host_keyboard_led_state().num_lock ) isIndicator = true;
       #endif
 
-      #if defined(CAPS_LOCK_LED_INDEX)
+      #ifdef(CAPS_LOCK_LED_INDEX)
       if ( (index + i) == CAPS_LOCK_LED_INDEX && host_keyboard_led_state().caps_lock ) isIndicator = true;
       #endif
 
-      #if defined(CAPS_MAC_WIN_LED_INDEX)
+      #ifdef(CAPS_MAC_WIN_LED_INDEX)
       if ( (index + i) == CAPS_MAC_WIN_LED_INDEX && host_keyboard_led_state().caps_lock ) isIndicator = true;
       #endif
 
-      #if defined(CAPS_LOCK_INDEX)
+      #ifdef(CAPS_LOCK_INDEX)
       if ( (index + i) == CAPS_LOCK_INDEX && host_keyboard_led_state().caps_lock ) isIndicator = true;
       #endif
 
-      #if defined(SCROLL_LOCK_INDEX)
+      #ifdef(SCROLL_LOCK_INDEX)
       if ( (index + i) == SCROLL_LOCK_INDEX && host_keyboard_led_state().scroll_lock ) isIndicator = true;
       #endif
 
       if (isIndicator) {
 
-      #if defined(RGBLIGHT_ENABLE)
+      #ifdef(RGBLIGHT_ENABLE)
       rgblight_setrgb_at(255, 255, 255, index + i);
-      #elif defined(RGB_MATRIX_ENABLE)
+      #elifdef(RGB_MATRIX_ENABLE)
       rgb_matrix_set_color(index + i, 255, 255, 255);
       #endif
 
       } else {
 
-      #if defined(RGBLIGHT_ENABLE)
+      #ifdef(RGBLIGHT_ENABLE)
       rgblight_setrgb_at(r, g, b, index + i);
-      #elif defined(RGB_MATRIX_ENABLE)
+      #elifdef(RGB_MATRIX_ENABLE)
       rgb_matrix_set_color(index + i, r, g, b);
       #endif
         }
@@ -131,16 +131,16 @@ void led_streaming(uint8_t *data) //Stream data from HID Packets to Keyboard.
 
 void signalrgb_mode_enable(void)
 {
-    #if defined(RGB_MATRIX_ENABLE)
+    #ifdef(RGB_MATRIX_ENABLE)
     rgb_matrix_mode_noeeprom(RGB_MATRIX_SIGNALRGB); //Set RGB Matrix to SignalRGB Compatible Mode
     #endif
 }
 
 void signalrgb_mode_disable(void)
 {
-    #if defined(RGBLIGHT_ENABLE)
+    #ifdef(RGBLIGHT_ENABLE)
     rgblight_reload_from_eeprom();
-    #elif defined(RGB_MATRIX_ENABLE)
+    #elifdef(RGB_MATRIX_ENABLE)
     rgb_matrix_reload_from_eeprom(); //Reloading last effect from eeprom
     #endif
 }
@@ -148,9 +148,9 @@ void signalrgb_mode_disable(void)
 void get_total_leds(void)//Grab total number of leds that a board has.
 {
     packet[0] = GET_TOTAL_LEDS;
-    #if defined(RGBLIGHT_ENABLE)
+    #ifdef(RGBLIGHT_ENABLE)
     packet[1] = RGBLIGHT_LED_COUNT;
-    #elif defined(RGB_MATRIX_ENABLE)
+    #elifdef(RGB_MATRIX_ENABLE)
     packet[1] = RGB_MATRIX_LED_COUNT;
     #endif
 
