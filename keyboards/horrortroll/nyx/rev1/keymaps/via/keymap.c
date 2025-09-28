@@ -76,10 +76,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 */
     /*  Row:    0        1        2        3        4        5        6        7        8        9        10       11       12       13       14     */
     [_FN]   = LAYOUT_65_ansi_blocker(
-                KC_GRV,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  _______, RGB_TOG,
-                QK_BOOT, _______, KC_MS_U, _______, _______, _______, _______, _______, _______, RGB_SAD, RGB_SAI, RGB_SPD, RGB_SPI, _______, RGB_MOD,
+                KC_GRV,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  _______, UG_TOGG,
+                QK_BOOT, _______, KC_MS_U, _______, _______, _______, _______, _______, _______, UG_SATD, UG_SATU, UG_SPDD, UG_SPDU, _______, UG_NEXT,
                 _______, KC_MS_L, KC_MS_D, KC_MS_R, _______, _______, _______, _______, _______, _______, _______, _______,          _______, _______,
-                _______,          _______, _______, KC_CALC, _______, _______, NK_TOGG, _______, KC_VOLD, KC_VOLU, KC_MUTE, _______, RGB_VAI, _______,
-                _______, _______, _______,                            _______,                   _______, _______,          RGB_HUD, RGB_VAD, RGB_HUI
+                _______,          _______, _______, KC_CALC, _______, _______, NK_TOGG, _______, KC_VOLD, KC_VOLU, KC_MUTE, _______, UG_VALU, _______,
+                _______, _______, _______,                            _______,                   _______, _______,          UG_HUED, UG_VALD, UG_HUEU
             )
 };

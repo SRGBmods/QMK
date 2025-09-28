@@ -29,11 +29,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [_FN1] = LAYOUT_numpad_6x4(
         _______,    KC_MUTE, KC_VOLD,   KC_VOLU,
-        RGB_MOD,    RGB_VAI, RGB_HUI,   KC_DEL,
-        RGB_RMOD,   RGB_VAD, RGB_HUD,
-        RGB_SAI,    RGB_SPI, KC_MPRV,   _______,
-        RGB_SAD,    RGB_SPD, KC_MPLY,
-        RGB_TOG,             KC_MNXT,   _______),
+        UG_NEXT,    UG_VALU, UG_HUEU,   KC_DEL,
+        UG_PREV,   UG_VALD, UG_HUED,
+        UG_SATU,    UG_SPDU, KC_MPRV,   _______,
+        UG_SATD,    UG_SPDD, KC_MPLY,
+        UG_TOGG,             KC_MNXT,   _______),
 
     [_RESERVED1] = LAYOUT_numpad_6x4(
         _______,    _______, _______,   _______,

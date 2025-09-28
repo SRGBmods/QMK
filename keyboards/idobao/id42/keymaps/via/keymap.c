@@ -75,8 +75,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      */
     [3] = LAYOUT(
         _______, XXXXXXX, XXXXXXX, XXXXXXX, QK_BOOT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______,
-        _______, RGB_TOG, RGB_MOD, RGB_HUD, RGB_HUI, RGB_SAD, RGB_SAI, XXXXXXX, XXXXXXX, XXXXXXX,          _______,
-        _______,         RGB_RMOD, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, NK_TOGG, XXXXXXX, XXXXXXX, RGB_VAI, XXXXXXX,
-        _______, _______, _______,          _______,          _______,                   RGB_SPD, RGB_VAD, RGB_SPI
+        _______, UG_TOGG, UG_NEXT, UG_HUED, UG_HUEU, UG_SATD, UG_SATU, XXXXXXX, XXXXXXX, XXXXXXX,          _______,
+        _______,         UG_PREV, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, NK_TOGG, XXXXXXX, XXXXXXX, UG_VALU, XXXXXXX,
+        _______, _______, _______,          _______,          _______,                   UG_SPDD, UG_VALD, UG_SPDU
     ),
 };

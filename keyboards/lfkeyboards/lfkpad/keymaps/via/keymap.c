@@ -26,12 +26,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     /* RGB */
     [1] = LAYOUT_numpad_6x4(
-        RGB_SAI, RGB_VAI, RGB_HUI, _______,
-        RGB_SAD, RGB_VAD, RGB_HUD, _______,
-        RGB_M_X, RGB_M_G, RGB_MOD,
-        RGB_M_SW,RGB_M_SN,RGB_M_K, RGB_RMOD,
+        UG_SATU, UG_VALU, UG_HUEU, _______,
+        UG_SATD, UG_VALD, UG_HUED, _______,
+        RGB_M_X, RGB_M_G, UG_NEXT,
+        RGB_M_SW,RGB_M_SN,RGB_M_K, UG_PREV,
         RGB_M_P, RGB_M_B, RGB_M_R,
-            XXXXXXX,      XXXXXXX, RGB_TOG
+            XXXXXXX,      XXXXXXX, UG_TOGG
     ),
 
     /* VIA wants four keymaps */

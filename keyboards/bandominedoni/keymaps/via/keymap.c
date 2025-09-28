@@ -90,8 +90,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
                 XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, VERSION,
      _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-            RGB_SAD, RGB_SAI, RGB_HUD, RGB_HUI, RGB_SPD, RGB_SPI, RGB_VAD, RGB_VAI,
-          XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, RGB_RMOD, RGB_MOD, EE_CLR, RGB_TOG
+            UG_SATD, UG_SATU, UG_HUED, UG_HUEU, UG_SPDD, UG_SPDU, UG_VALD, UG_VALU,
+          XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, UG_PREV, UG_NEXT, EE_CLR, UG_TOGG
     )
 };
 
@@ -100,7 +100,7 @@ const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {
     [_OPEN]     = { ENCODER_CCW_CW(KC_VOLD, KC_VOLU) },
     [_CLOSE]    = { ENCODER_CCW_CW(KC_VOLD, KC_VOLU) },
     [_MISC]     = { ENCODER_CCW_CW(_______, _______) },
-    [_FN]       = { ENCODER_CCW_CW(RGB_RMOD, RGB_MOD) },
+    [_FN]       = { ENCODER_CCW_CW(UG_PREV, UG_NEXT) },
 };
 #endif
 
@@ -146,32 +146,32 @@ bool rgb_matrix_indicators_user(void) {
         uint8_t layer = get_highest_layer(layer_state);
         switch (layer) {
             case _CLOSE:
-                // rgb_matrix_set_color(pgm_read_byte(&convert_led_location2number[11]),  RGB_RED);         //  RGB_TOG  <- too heavy.
+                // rgb_matrix_set_color(pgm_read_byte(&convert_led_location2number[11]),  RGB_RED);         //  UG_TOGG  <- too heavy.
 
                 // Close state indicator
                 rgb_matrix_set_color( 0, RGB_DARKWHITE);     //  oc
                 break;
 
             case _FN:
-                // rgb_matrix_set_color(pgm_read_byte(&convert_led_location2number[11]),  RGB_RED);         //  RGB_TOG  <- too heavy.
+                // rgb_matrix_set_color(pgm_read_byte(&convert_led_location2number[11]),  RGB_RED);         //  UG_TOGG  <- too heavy.
                 rgb_matrix_set_color(14, RGB_DARKYELLOW);      //  MI_OCTD
                 rgb_matrix_set_color(25, RGB_DARKGREEN);       //  MI_OCTU
                 rgb_matrix_set_color(14, RGB_DARKYELLOW);      //  MI_VELD
                 rgb_matrix_set_color(25, RGB_DARKGREEN);       //  MI_VELU
 
-                rgb_matrix_set_color( 6, RGB_DARKBLUE);        //  RGB_SAD
-                rgb_matrix_set_color( 9, RGB_DARKBLUE);        //  RGB_SAI
-                rgb_matrix_set_color(18, RGB_DARKBLUE);        //  RGB_HUD
-                rgb_matrix_set_color(21, RGB_DARKBLUE);        //  RGB_HUI
-                rgb_matrix_set_color(29, RGB_DARKBLUE);        //  RGB_SPD
-                rgb_matrix_set_color(32, RGB_DARKBLUE);        //  RGB_SPI
-                rgb_matrix_set_color(36, RGB_DARKBLUE);        //  RGB_VAD
-                rgb_matrix_set_color(39, RGB_DARKBLUE);        //  RGB_VAI
+                rgb_matrix_set_color( 6, RGB_DARKBLUE);        //  UG_SATD
+                rgb_matrix_set_color( 9, RGB_DARKBLUE);        //  UG_SATU
+                rgb_matrix_set_color(18, RGB_DARKBLUE);        //  UG_HUED
+                rgb_matrix_set_color(21, RGB_DARKBLUE);        //  UG_HUEU
+                rgb_matrix_set_color(29, RGB_DARKBLUE);        //  UG_SPDD
+                rgb_matrix_set_color(32, RGB_DARKBLUE);        //  UG_SPDU
+                rgb_matrix_set_color(36, RGB_DARKBLUE);        //  UG_VALD
+                rgb_matrix_set_color(39, RGB_DARKBLUE);        //  UG_VALU
 
-                rgb_matrix_set_color(31, RGB_DARKBLUE);        //  RGB_RMOD
-                rgb_matrix_set_color(37, RGB_DARKBLUE);        //  RGB_MOD
+                rgb_matrix_set_color(31, RGB_DARKBLUE);        //  UG_PREV
+                rgb_matrix_set_color(37, RGB_DARKBLUE);        //  UG_NEXT
                 rgb_matrix_set_color(38, RGB_DARKPINK);        //  EE_CLR
-                rgb_matrix_set_color(40, RGB_DARKRED);         //  RGB_TOG
+                rgb_matrix_set_color(40, RGB_DARKRED);         //  UG_TOGG
 
                 rgb_matrix_set_color(41, RGB_DARKORANGE);      //  _FN
                 break;

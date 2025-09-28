@@ -44,11 +44,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * └───────┴───┘───┘
      */
     [1] = LAYOUT_numpad_6x4(
-        QK_BOOT,   RGB_MOD, _______, _______,
-        _______,   RGB_HUD, RGB_HUI, RGB_VAD,
+        QK_BOOT,   UG_NEXT, _______, _______,
+        _______,   UG_HUED, UG_HUEU, UG_VALD,
         KC_HOME,     KC_UP, KC_PGUP,
-        KC_LEFT,  RGB_M_SW, KC_RGHT, RGB_VAI,
+        KC_LEFT,  RGB_M_SW, KC_RGHT, UG_VALU,
         KC_END,    KC_DOWN, KC_PGDN,
-        KC_INS,              KC_DEL, RGB_TOG
+        KC_INS,              KC_DEL, UG_TOGG
     )
 };

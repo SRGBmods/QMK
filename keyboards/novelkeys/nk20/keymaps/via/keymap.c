@@ -26,10 +26,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [1] = LAYOUT( /* FN */
     KC_NUM,  KC_TRNS, KC_TRNS,
-    KC_TRNS, RGB_SPD, RGB_SPI, KC_TRNS,
-    RGB_TOG, RGB_MOD, RGB_HUD, KC_TRNS,
-    RGB_SAD, RGB_SAI, RGB_HUI,
-    RGB_VAD, RGB_VAI, KC_TRNS, KC_TRNS,
+    KC_TRNS, UG_SPDD, UG_SPDU, KC_TRNS,
+    UG_TOGG, UG_NEXT, UG_HUED, KC_TRNS,
+    UG_SATD, UG_SATU, UG_HUEU,
+    UG_VALD, UG_VALU, KC_TRNS, KC_TRNS,
     KC_TRNS,          KC_TRNS),
 
 [2] = LAYOUT( /* Empty for dynamic keymaps */

@@ -47,11 +47,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_TRNS,          KC_TRNS,             KC_TRNS, KC_TRNS, KC_TRNS,
                                                                              KC_TRNS, TO(3),   KC_TRNS),
   [_LAY3] = LAYOUT(
-        KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,    RGB_HUI, RGB_SAI, RGB_SPI,
-        KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,    RGB_HUD, RGB_SAD, RGB_SPD,
+        KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,    UG_HUEU, UG_SATU, UG_SPDU,
+        KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,    UG_HUED, UG_SATD, UG_SPDD,
         KC_TRNS, KC_TRNS, KC_TRNS,             KC_TRNS, KC_TRNS, KC_TRNS,
-        KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,             RGB_MOD,
-        KC_TRNS,          KC_TRNS,             RGB_VAD, RGB_TOG, RGB_VAI,
+        KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,             UG_NEXT,
+        KC_TRNS,          KC_TRNS,             UG_VALD, UG_TOGG, UG_VALU,
                                                                              KC_TRNS, TO(0),   KC_TRNS)
 
 };

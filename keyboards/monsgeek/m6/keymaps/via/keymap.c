@@ -46,11 +46,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______,                   _______, _______,          _______, _______,                  _______, _______,           KC_A,    KC_S,    KC_D),
 
     [WIN_FN] = LAYOUT( 
-        KC_GRV,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11, KC_F12,   _______,           RGB_MOD,
+        KC_GRV,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11, KC_F12,   _______,           UG_NEXT,
         _______, _______,TG(WIN_W),_______, _______, _______, _______, _______, KC_INS,  DF(MAC_B),KC_PSCR,_______, _______, _______,           KC_HOME,
-        _______, _______, _______, _______, _______, _______, _______, _______, _______, RGB_TOG, RGB_SPD, RGB_SPI, _______, RGB_HUI,           KC_END,
-        _______, _______, _______, _______, KC_CALC, _______, _______, _______, _______, KC_MUTE, KC_VOLD, KC_VOLU, _______, _______,  RGB_VAI,
-        _______,                   _______, _______,          GU_TOGG, _______,                  _______, _______,           RGB_SAD,  RGB_VAD, RGB_SAI),
+        _______, _______, _______, _______, _______, _______, _______, _______, _______, UG_TOGG, UG_SPDD, UG_SPDU, _______, UG_HUEU,           KC_END,
+        _______, _______, _______, _______, KC_CALC, _______, _______, _______, _______, KC_MUTE, KC_VOLD, KC_VOLU, _______, _______,  UG_VALU,
+        _______,                   _______, _______,          GU_TOGG, _______,                  _______, _______,           UG_SATD,  UG_VALD, UG_SATU),
 
     [MAC_B] = LAYOUT( /* Base */
         KC_ESC,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_MINS,KC_EQL,   KC_BSPC,          KC_DEL,
@@ -67,10 +67,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______, _______, _______,                   _______,                            _______, _______, _______,          KC_A,    KC_S,    KC_D),
 
     [MAC_FN] = LAYOUT( /* FN */
-        KC_GRV,  KC_BRID, KC_BRIU, KC_MCTL, KC_SIRI, _______, _______, KC_MPRV, KC_MPLY, KC_MNXT, KC_MUTE, KC_VOLD,KC_VOLU,  _______,           RGB_MOD,
+        KC_GRV,  KC_BRID, KC_BRIU, KC_MCTL, KC_SIRI, _______, _______, KC_MPRV, KC_MPLY, KC_MNXT, KC_MUTE, KC_VOLD,KC_VOLU,  _______,           UG_NEXT,
         _______, _______,TG(MAC_W),_______, _______, _______, _______, _______, KC_INS,  DF(WIN_B),KC_PSCR,_______, _______, _______,           KC_HOME,
-        _______, _______, _______, _______, _______, _______, _______, _______, _______, RGB_TOG, RGB_SPD, RGB_SPI, _______, RGB_HUI,           KC_END,
-        _______, _______, _______, _______, KC_CALC, _______, _______, _______, _______, KC_MUTE, KC_VOLD, KC_VOLU, _______, _______,  RGB_VAI,
-        _______,                   _______, _______,          _______, _______,                  _______, _______,           RGB_SAD,  RGB_VAD, RGB_SAI),
+        _______, _______, _______, _______, _______, _______, _______, _______, _______, UG_TOGG, UG_SPDD, UG_SPDU, _______, UG_HUEU,           KC_END,
+        _______, _______, _______, _______, KC_CALC, _______, _______, _______, _______, KC_MUTE, KC_VOLD, KC_VOLU, _______, _______,  UG_VALU,
+        _______,                   _______, _______,          _______, _______,                  _______, _______,           UG_SATD,  UG_VALD, UG_SATU),
 };
 
