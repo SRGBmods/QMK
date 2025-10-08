@@ -118,7 +118,7 @@ bool process_record_kb(uint16_t keycode, keyrecord_t *record) {
 
     switch (keycode) {
 #    ifdef RGB_MATRIX_ENABLE
-        case RGB_TOG:
+        case UG_TOGG:
             if (record->event.pressed) {
                 switch (rgb_matrix_get_flags()) {
                     case LED_FLAG_ALL: {
@@ -131,7 +131,7 @@ bool process_record_kb(uint16_t keycode, keyrecord_t *record) {
                 }
             }
          return false;
-        case RGB_VAI:
+        case UG_VALU:
           rgb_matrix_set_flags(LED_FLAG_ALL);
           return true;
 #    endif
