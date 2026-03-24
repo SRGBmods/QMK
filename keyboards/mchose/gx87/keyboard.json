@@ -172,7 +172,7 @@
         "max_brightness": 100,
         "sleep": false,
         "speed_steps": 35,
-        "timeout": 60000,
+        "timeout": 0,
         "val_steps": 20
     },
     "url": "",
