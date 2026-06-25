@@ -1,5 +1,5 @@
 {
-    "keyboard_name": "GMMK3 65% ANSI",
+    "keyboard_name": "GMMK3 65% ISO",
     "manufacturer": "Glorious",
     "url": "http://www.pcgamingrace.com",
     "maintainer": "Piotr Kleinschmidt",
@@ -12,7 +12,7 @@
         "tap_keycode_delay": 10
     },
     "bootmagic": {
-        "matrix": [1, 3]
+        "matrix": [1, 6]    // Enter Bootloader mode via ESC
     },
     "matrix_pins": {
         "cols": ["A0", "A1", "A2", "A3", "A4", "C1", "C2", "C3"],
@@ -36,7 +36,7 @@
     "layouts": {
         "LAYOUT": {
             "layout": [
-                {"label": "Esc", "matrix": [1, 3], "x": 0, "y": 0},
+                {"label": "Esc", "matrix": [1, 6], "x": 0, "y": 0},
                 {"label": "1",   "matrix": [1, 7], "x": 1, "y": 0},
                 {"label": "2",   "matrix": [2, 7], "x": 2, "y": 0},
                 {"label": "3",   "matrix": [3, 7], "x": 3, "y": 0},
