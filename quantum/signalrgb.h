@@ -12,6 +12,21 @@ enum signalrgb_commands
     GET_FIRMWARE_TYPE = 0x28,
 };
 
+#define PROTOCOL_VERSION_BYTE_1 1
+#define PROTOCOL_VERSION_BYTE_2 0
+#define PROTOCOL_VERSION_BYTE_3 6
+#define DEVICE_UNIQUE_IDENTIFIER_BYTE_1 0
+#define DEVICE_UNIQUE_IDENTIFIER_BYTE_2 0
+
+#ifndef DEVICE_UNIQUE_IDENTIFIER_BYTE_3
+#define DEVICE_UNIQUE_IDENTIFIER_BYTE_3 0
+#endif
+
+#define FIRMWARE_TYPE_BYTE 2
+#define DEVICE_ERROR_LED_BOUNDS 253
+#define DEVICE_ERROR_LED_COUNT 254
+
+/*
 enum signalrgb_responses
 {
     PROTOCOL_VERSION_BYTE_1 = 1,
@@ -24,6 +39,7 @@ enum signalrgb_responses
     DEVICE_ERROR_LED_BOUNDS = 253,
     DEVICE_ERROR_LED_COUNT = 254 
 };
+*/
 
 void get_qmk_version(void);
 void get_signalrgb_protocol_version(void);
@@ -51,17 +67,13 @@ gmmk/gmmk2/p65/ansi:default                 0 0 7
 gmmk/gmmk2/p65/iso:default                  0 0 8
 gmmk/gmmk2/p96/ansi:default                 0 0 9
 gmmk/gmmk2/p96/iso:default                  0 0 10
-redragon/k530:default                       0 1 1
-redragon/k552/rev1:ansi                     0 1 2
-redragon/k552/rev1:iso                      0 1 2
-redragon/k552/rev2:default                  0 1 2
-redragon/k552/rev2:abnt2                    0 1 2
-redragon/k556:default                       0 1 3
-redragon/k580:default                       0 1 4
-redragon/k582:default                       0 1 3
-redragon/k630:default                       0 1 5
+gmmk/gmmk3/p65/ansi:default                 0 0 11
+gmmk/gmmk3/p65/iso:default                  0 0 12
+gmmk/gmmk3/p75/ansi:default                 0 0 13
+gmmk/gmmk3/p75/iso:default                  0 0 14
+gmmk/gmmk3/p100/ansi:default                0 0 15
+gmmk/gmmk3/p100/iso:default                 0 0 16
 */
-
 
 /* keymap via:
 DEVICE, DEVICE_UNIQUE_IDENTIFIER_BYTE_1,DEVICE_UNIQUE_IDENTIFIER_BYTE_2,DEVICE_UNIQUE_IDENTIFIER_BYTE_3
