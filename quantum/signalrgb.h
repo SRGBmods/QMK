@@ -73,6 +73,7 @@ gmmk/gmmk3/p75/ansi:default                 0 0 13
 gmmk/gmmk3/p75/iso:default                  0 0 14
 gmmk/gmmk3/p100/ansi:default                0 0 15
 gmmk/gmmk3/p100/iso:default                 0 0 16
+gmmk/numpad                                 0 0 17
 */
 
 /* keymap via:
